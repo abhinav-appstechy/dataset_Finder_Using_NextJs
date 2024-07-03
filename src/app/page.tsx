@@ -1,5 +1,5 @@
-import DatasetFindSection from "@/Components/DatasetFindSection";
-import HeroSection from "@/Components/HeroSection";
+import DatasetFindSection from "@/app/Components/DatasetFindSection";
+import HeroSection from "@/app/Components/HeroSection";
 import Image from "next/image";
 
 export default function Home() {
