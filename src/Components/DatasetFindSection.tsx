@@ -70,11 +70,11 @@ const DatasetFindSection = (props: Props) => {
   function formatSize(bits: number) {
     const sizes = ["Bits", "KB", "MB", "GB"];
     if (bits === 0) return "0 Bits";
-
-    const i = parseInt(Math.floor(Math.log(bits) / Math.log(1024)));
+  
+    const i = Math.floor(Math.log(bits) / Math.log(1024));
     const sizeInUnit = bits / Math.pow(1024, i);
-    const size = Math.floor(sizeInUnit) + (sizeInUnit % 1 > 0.5 ? 1 : 0);
-
+    const size = Math.round(sizeInUnit);
+  
     return `${size} ${sizes[i]}`;
   }
 
